@@ -60,30 +60,30 @@ model.load_state_dict(torch.load(
 )
 # Disease Advice
 disease_advice = {
-    'Acne': "Maintain a proper skincare routine, avoid excessive touching of the affected areas, and consider using over-the-counter topical treatments. If severe, consult a dermatologist.",
-    'Arthritis': "Stay active with gentle exercises, manage weight, and consider pain-relief strategies like hot/cold therapy. Consult a rheumatologist for tailored guidance.",
-    'Bronchial Asthma': "Follow prescribed inhaler and medication regimen, avoid triggers like smoke and allergens, and have an asthma action plan. Regular check-ups with a pulmonologist are important.",
-    'Cervical spondylosis': "Maintain good posture, do neck exercises, and use ergonomic support. Physical therapy and pain management techniques might be helpful.",
-    'Chicken pox': "Rest, maintain hygiene, and avoid scratching. Consult a doctor for appropriate antiviral treatment.",
-    'Common Cold': "Get plenty of rest, stay hydrated, and consider over-the-counter remedies for symptom relief. Seek medical attention if symptoms worsen or last long.",
-    'Dengue': "Stay hydrated, rest, and manage fever with acetaminophen. Seek medical care promptly, as dengue can escalate quickly.",
-    'Dimorphic Hemorrhoids': "Follow a high-fiber diet, maintain good hygiene, and consider stool softeners. Consult a doctor if symptoms persist.",
-    'Fungal infection': "Keep the affected area clean and dry, use antifungal creams, and avoid sharing personal items. Consult a dermatologist if it persists.",
-    'Hypertension': "Follow a balanced diet, exercise regularly, reduce salt intake, and take prescribed medications. Regular check-ups with a healthcare provider are important.",
-    'Impetigo': "Keep the affected area clean, use prescribed antibiotics, and avoid close contact. Consult a doctor for proper treatment.",
-    'Jaundice': "Get plenty of rest, maintain hydration, and follow a doctor's advice for diet and medications. Regular monitoring is important.",
-    'Malaria': "Take prescribed antimalarial medications, rest, and manage fever. Seek medical attention for severe cases.",
-    'Migraine': "Identify triggers, manage stress, and consider pain-relief medications. Consult a neurologist for personalized management.",
-    'Pneumonia': "Follow prescribed antibiotics, rest, stay hydrated, and monitor symptoms. Seek immediate medical attention for severe cases.",
-    'Psoriasis': "Moisturize, use prescribed creams, and avoid triggers. Consult a dermatologist for effective management.",
-    'Typhoid': "Take prescribed antibiotics, rest, and stay hydrated. Dietary precautions are important. Consult a doctor for proper treatment.",
-    'Varicose Veins': "Elevate legs, exercise regularly, and wear compression stockings. Consult a vascular specialist for evaluation and treatment options.",
-    'allergy': "Identify triggers, manage exposure, and consider antihistamines. Consult an allergist for comprehensive management.",
-    'diabetes': "Follow a balanced diet, exercise, monitor blood sugar levels, and take prescribed medications. Regular visits to an endocrinologist are essential.",
-    'drug reaction': "Discontinue the suspected medication, seek medical attention if symptoms are severe, and inform healthcare providers about the reaction.",
-    'gastroesophageal reflux disease': "Follow dietary changes, avoid large meals, and consider medications. Consult a doctor for personalized management.",
-    'peptic ulcer disease': "Avoid spicy and acidic foods, take prescribed medications, and manage stress. Consult a gastroenterologist for guidance.",
-    'urinary tract infection': "Stay hydrated, take prescribed antibiotics, and maintain good hygiene. Consult a doctor for appropriate treatment."
+    'Acne': "Maintain a proper skincare routine, avoid excessive touching of the affected areas, and consider using over-the-counter topical treatments. If severe, consult a dermatologist Medicines: Clindamycin (Clindac A), Isotretinoin (Accutane).",
+    'Arthritis': "Stay active with gentle exercises, manage weight, and consider pain-relief strategies like hot/cold therapy. Consult a rheumatologist for tailored guidance Medicines: Diclofenac (Voveran), Naproxen (Naprosyn).",
+    'Bronchial Asthma': "Follow prescribed inhaler and medication regimen, avoid triggers like smoke and allergens, and have an asthma action plan. Regular check-ups with a pulmonologist are important Medicines: Salbutamol (Asthalin), Budesonide (Pulmicort).",
+    'Cervical spondylosis': "Maintain good posture, do neck exercises, and use ergonomic support. Physical therapy and pain management techniques might be helpful Medicines: Diclofenac (Voveran), Pregabalin (Lyrica).",
+    'Chicken pox': "Rest, maintain hygiene, and avoid scratching. Consult a doctor for appropriate antiviral treatment Medicines: Acyclovir (Zovirax), Calamine Lotion.",
+    'Common Cold': "Get plenty of rest, stay hydrated, and consider over-the-counter remedies for symptom relief. Seek medical attention if symptoms worsen or last long Use DOLO 650 Medicines: Paracetamol (Dolo-650), Cetirizine (Cetzine), Phenylephrine + Chlorpheniramine (Sinarest).",
+    'Dengue': "Stay hydrated, rest, and manage fever with acetaminophen. Seek medical care promptly, as dengue can escalate quickly  Medicines: Paracetamol (Dolo-650), ORS (Electral Powder). ",
+    'Dimorphic Hemorrhoids': "Follow a high-fiber diet, maintain good hygiene, and consider stool softeners. Consult a doctor if symptoms persist Medicines: Hydrocortisone Cream (Proctosedyl), Diosmin + Hesperidin (Daflon).",
+    'Fungal infection': "Keep the affected area clean and dry, use antifungal creams, and avoid sharing personal items. Consult a dermatologist if it persists Medicines: Fluconazole (Fluka), Clotrimazole (Canesten).",
+    'Hypertension': "Follow a balanced diet, exercise regularly, reduce salt intake, and take prescribed medications. Regular check-ups with a healthcare provider are important Medicines: Amlodipine (Amlovas), Metoprolol (Betaloc).",
+    'Impetigo': "Keep the affected area clean, use prescribed antibiotics, and avoid close contact. Consult a doctor for proper treatment Medicines: MMedicines: Chloroquine (Lariago), Artemether + Lumefantrine (Riamet).upirocin (Bactroban), Fusidic Acid (Fucidin).",
+    'Jaundice': "Get plenty of rest, maintain hydration, and follow a doctor's advice for diet and medications. Regular monitoring is important  Medicines: Ursodeoxycholic Acid (Ursocol), Liv-52 (Herbal Supplement).",
+    'Malaria': "Take prescribed antimalarial medications, rest, and manage fever. Seek medical attention for severe cases.Medicines: Sumatriptan (Imitrex), Naproxen (Naprosyn).",
+    'Migraine': "Identify triggers, manage stress, and consider pain-relief medications. Consult a neurologist for personalized management.Medicines: Sumatriptan (Imitrex), Naproxen (Naprosyn).",
+    'Pneumonia': "Follow prescribed antibiotics, rest, stay hydrated, and monitor symptoms. Seek immediate medical attention for severe cases.Medicines: Azithromycin (Zithromax), Amoxicillin + Clavulanic Acid (Augmentin).",
+    'Psoriasis': "Moisturize, use prescribed creams, and avoid triggers. Consult a dermatologist for effective management.Medicines: Betamethasone Cream, Methotrexate (Trexall).",
+    'Typhoid': "Take prescribed antibiotics, rest, and stay hydrated. Dietary precautions are important. Consult a doctor for proper treatment. Medicines: Azithromycin (Zithromax), Cefixime (Taxim-O).",
+    'Varicose Veins': "Elevate legs, exercise regularly, and wear compression stockings. Consult a vascular specialist for evaluation and treatment options. Medicines: Diosmin + Hesperidin (Daflon), Horse Chestnut Extract (Venostasin).",
+    'allergy': "Identify triggers, manage exposure, and consider antihistamines. Consult an allergist for comprehensive management.Medicines: Levocetirizine (Levocet), Fexofenadine (Allegra).",
+    'diabetes': "Follow a balanced diet, exercise, monitor blood sugar levels, and take prescribed medications. Regular visits to an endocrinologist are essential. Medicines: Metformin (Glycomet), Glimepiride (Amaryl).",
+    'drug reaction': "Discontinue the suspected medication, seek medical attention if symptoms are severe, and inform healthcare providers about the reaction. Medicines: Antihistamines (Avil, Allegra), Corticosteroids (Prednisolone).",
+    'gastroesophageal reflux disease': "Follow dietary changes, avoid large meals, and consider medications. Consult a doctor for personalized management.Medicines: Pantoprazole (Pantocid), Esomeprazole (Nexium)",
+    'peptic ulcer disease': "Avoid spicy and acidic foods, take prescribed medications, and manage stress. Consult a gastroenterologist for guidance.Medicines: Omeprazole (Omez), Ranitidine (Zantac).",
+    'urinary tract infection': "Stay hydrated, take prescribed antibiotics, and maintain good hygiene. Consult a doctor for appropriate treatment.Medicines: Nitrofurantoin (Macrobid), Ciprofloxacin (Cipro)."
 }
 
 howto= """Welcome to the <b>Medical Chatbot</b>, powered by Micky.
@@ -183,7 +183,7 @@ with gr.Blocks(css = """#col_container { margin-left: auto; margin-right: auto;}
         pred_prob= torch.argmax(torch.softmax(y_logits, dim=1), dim=1)
    
       test_pred= class_names[pred_prob.item()] 
-      bot_message = f' Based on your symptoms, I believe you are having {test_pred} and I would advice you {disease_advice[test_pred]}'
+      bot_message = f' Based on your symptoms, I believe you are having {test_pred} and I would advice you {disease_advice[test_pred]}This is for educational purposes only. For more details, please consult a doctor.'
     chat_history.append((message, bot_message))
     time.sleep(2)
     return "", chat_history
